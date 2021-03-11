@@ -9,7 +9,7 @@ function slider() {
     var current = $('.active');
     current.removeClass('active').next().addClass('active');
 
-    if 
+    // if
     // var nextImage = current.next();
   })
 
