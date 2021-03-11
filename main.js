@@ -4,16 +4,26 @@ $(document).ready(function(){
 
 function slider() {
   var next = $('.next > .fa-angle-right');
-  var prev = $('.prev > fa-angle-left');
+  var prev = $('.prev > .fa-angle-left');
+
   next.click(function(){
     var current = $('.active');
     current.removeClass('active').next().addClass('active');
 
-    // if
-    // var nextImage = current.next();
+    if (current.hasClass('last')) {
+      $('.first').addClass('active');
+    }
   })
 
+  prev.click(function(){
+    var current = $('.active');
+    // console.log('ok');
+    current.removeClass('active').prev().addClass('active');
 
+    if (current.hasClass('first')) {
+      $('.last').addClass('active');
+    }
+  })
 }
 
 
