@@ -4,8 +4,8 @@ $(document).ready(function(){
     var nextImage = current.next();
 
     if (nextImage.length) {
-      current.removeClass('.active');
-      nextImage.addClass('.active');
+      current.removeClass('.active').css(transform, -50%);
+      nextImage.addClass('.active').css(transform, 50%);
     }
   })
 })
