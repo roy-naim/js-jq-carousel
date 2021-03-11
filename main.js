@@ -1,8 +1,16 @@
 $(document).ready(function(){
   $('.next').click(function(){
-    console.log("ok");
+    var current = $('.active');
+    var nextImage = current.next();
+
+    if (nextImage.length) {
+      current.removeClass('.active');
+      nextImage.addClass('.active');
+    }
   })
 })
+
+
 
 
 
